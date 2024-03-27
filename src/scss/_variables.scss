@@ -1,0 +1,44 @@
+$black: #232323;
+$background: #ffdf8c;
+$gray-line: #f6f6f6;
+$orange: #0e0d0d;
+
+$container-width: 90%;
+
+$duration: 0.15s;
+
+@mixin width1400() {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin width1220() {
+  @media (max-width: 1220px) {
+    @content;
+  }
+}
+
+@mixin width1060() {
+  @media (max-width: 1060px) {
+    @content;
+  }
+}
+
+@mixin width755() {
+  @media (max-width: 755px) {
+    @content;
+  }
+}
+
+@mixin width560() {
+  @media (max-width: 560px) {
+    @content;
+  }
+}
+
+@mixin width440() {
+  @media (max-width: 440px) {
+    @content;
+  }
+}

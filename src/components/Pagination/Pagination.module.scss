@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, -1.042rem + 8.33vw, 20px);
+  user-select: none;
+  font-weight: bold;
+  font-size: 20px;
+
+  li {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  :global {
+    .previous {
+      font-size: 40px;
+      rotate: 70deg;
+      transition: transform 0.1s ease-in-out;
+
+      &:active {
+        transform: translateY(5px);
+      }
+    }
+    .disabled {
+      opacity: 0.5;
+    }
+
+    .next {
+      font-size: 40px;
+      rotate: 110deg;
+      scale: 1 -1;
+      transition: transform 0.1s ease-in-out;
+
+      &:active {
+        transform: translateY(5px);
+      }
+    }
+
+    .selected {
+      transform: translateY(-5px);
+
+      a {
+        color: #fe5f1e;
+      }
+    }
+  }
+}
