@@ -27,7 +27,7 @@ const App: React.FC = () => {
         <div className="content">
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/react-pizza" element={<Home />} />
               <Route
                 path="/cart"
                 element={

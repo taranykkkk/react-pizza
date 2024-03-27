@@ -44,7 +44,7 @@ const FullPizza: React.FC = () => {
   return (
     <>
       <Link
-        to="/"
+        to="/react-pizza"
         className="button button--outline button--add go-back-btn full-pizza">
         <svg
           width="8"

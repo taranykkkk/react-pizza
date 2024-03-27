@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   return (
     <div className="header">
       <div className="container">
-        <Link to="/">
+        <Link to="/react-pizza">
           <div className="header__logo">
             <img width="140" src={logoSvg} alt="Pizza logo" />
             <div className="header__logo--text">
