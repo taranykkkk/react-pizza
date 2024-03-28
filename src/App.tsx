@@ -29,7 +29,7 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/react-pizza" element={<Home />} />
               <Route
-                path="/cart"
+                path="/react-pizza/cart"
                 element={
                   <React.Suspense fallback={<div>Завантаження...</div>}>
                     <Cart />
@@ -37,7 +37,7 @@ const App: React.FC = () => {
                 }
               />
               <Route
-                path="/pizza/:id"
+                path="/react-pizza/pizza/:id"
                 element={
                   <React.Suspense fallback={<div>Завантаження...</div>}>
                     <FullPizza />
