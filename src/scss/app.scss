@@ -469,6 +469,7 @@ body {
 .fullPizza {
   display: flex;
   gap: 5px;
+  align-items: center;
 
   @include width755() {
     flex-direction: column;

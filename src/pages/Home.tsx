@@ -28,6 +28,8 @@ const Home: React.FC = () => {
   const { categoryId, currentPage, sort, searchValue } =
     useSelector(selectFilter);
 
+  console.log(searchValue);
+
   const getPizzas = async () => {
     const sortBy = sort.sortProperty;
     const searchCategory = categoryId > 0 ? `category=${categoryId}` : '';
@@ -127,7 +129,15 @@ const Home: React.FC = () => {
           {status === 'loading' ? skeleton : pizzas}
         </div>
       )}
-      <Pagination items={items} setCurrentPage={onChangePage} />
+      {items.items.length === 0 && (
+        <h2 style={{ textAlign: 'center', padding: '100px' }}>
+          Нажаль піцу за назвою '{searchValue}' не знайдено
+        </h2>
+      )}
+
+      {items.items.length !== 0 && (
+        <Pagination items={items} setCurrentPage={onChangePage} />
+      )}
     </>
   );
 };
