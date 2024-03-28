@@ -46,7 +46,7 @@ const CartItemBlock: React.FC<CartItemProps> = ({
       <div className="cart__item-img">
         <img
           className="pizza-block__image"
-          src={require(`../../assets/pizzas/${imageUrl}`)}
+          src={require(`../assets/pizzas/${imageUrl}`)}
           alt="Pizza"
         />
       </div>
