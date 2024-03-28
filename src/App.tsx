@@ -1,11 +1,8 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-// import Cart from './pages/Cart';
 import Header from './components/Header';
 import Home from './pages/Home';
-// import NotFound from './pages/NotFound';
-// import FullPizza from './pages/FullPizza';
 
 import './scss/app.scss';
 
@@ -27,7 +24,7 @@ const App: React.FC = () => {
         <div className="content">
           <div className="container">
             <Routes>
-              <Route path="/react-pizza" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route
                 path="/cart"
                 element={
