@@ -28,8 +28,6 @@ const Home: React.FC = () => {
   const { categoryId, currentPage, sort, searchValue } =
     useSelector(selectFilter);
 
-  console.log(searchValue);
-
   const getPizzas = async () => {
     const sortBy = sort.sortProperty;
     const searchCategory = categoryId > 0 ? `category=${categoryId}` : '';
@@ -111,7 +109,7 @@ const Home: React.FC = () => {
   const onChangePage = (page: number) => {
     dispatch(setPageCount(page));
   };
-
+  console.log(status);
   return (
     <>
       <div className="content__top">
@@ -129,13 +127,13 @@ const Home: React.FC = () => {
           {status === 'loading' ? skeleton : pizzas}
         </div>
       )}
-      {items.items.length === 0 && (
-        <h2 style={{ textAlign: 'center', padding: '100px' }}>
+      {status !== 'loading' && pizzas.length === 0 && (
+        <h2 style={{ textAlign: 'center', padding: '100px auto' }}>
           Нажаль піцу за назвою '{searchValue}' не знайдено
         </h2>
       )}
 
-      {items.items.length !== 0 && (
+      {pizzas.length !== 0 && (
         <Pagination items={items} setCurrentPage={onChangePage} />
       )}
     </>
