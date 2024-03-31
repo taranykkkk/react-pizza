@@ -1,4 +1,6 @@
 React Pizza
+!!!! If you do not receive the pizza list, please use a VPN (I did not know that this server is not available when using the Internet from a mobile operator) !!!!
+
 This is a pizza store. It has pagination, category filtering, and sorting by price, popularity, and name.
 To implement the backend, I used my server (I wrote all the data myself, in fact, this is a JSON file).
 
