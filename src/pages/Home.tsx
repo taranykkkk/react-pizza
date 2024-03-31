@@ -127,10 +127,12 @@ const Home: React.FC = () => {
           {status === 'loading' ? skeleton : pizzas}
         </div>
       )}
-      {status !== 'loading' && pizzas.length === 0 && (
+      {status !== 'loading' && status !== 'error' && pizzas.length === 0 ? (
         <h2 style={{ textAlign: 'center', padding: '100px auto' }}>
           Нажаль піцу за назвою '{searchValue}' не знайдено
         </h2>
+      ) : (
+        ''
       )}
 
       {pizzas.length !== 0 && (
